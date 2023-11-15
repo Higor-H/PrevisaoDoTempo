@@ -68,36 +68,36 @@ frmCitySearch.addEventListener("submit", function(event){
 
 var weatherImages = {
     "morning": {
-        "Rain": "/img/morning/morning_rain.gif",
-        "Clouds": "/img/morning/morning_clouds.gif",
-        "Drizzle": "/img/morning/morning_clouds.gif",
-        "Thunderstorm": "/img/morning/morning_thunderstorm.gif",
-        "Snow": "/img/morning/morning_snow.gif",
-        "Clear": "/img/morning/morning_clear.png"
+        "Rain": "./img/morning/morning_rain.gif",
+        "Clouds": "./img/morning/morning_clouds.gif",
+        "Drizzle": "./img/morning/morning_clouds.gif",
+        "Thunderstorm": "./img/morning/morning_thunderstorm.gif",
+        "Snow": "./img/morning/morning_snow.gif",
+        "Clear": "./img/morning/morning_clear.png"
     },
     "day": {
-        "Rain": "/img/day/day_rain.gif",
-        "Clouds": "/img/day/day_clouds.gif",
-        "Drizzle": "/img/day/day_clouds.gif",
-        "Thunderstorm": "/img/day/day_thunderstorm.gif",
-        "Snow": "/img/day/day_snow.gif",
-        "Clear": "/img/day/day_clear.png"
+        "Rain": "./img/day/day_rain.gif",
+        "Clouds": "./img/day/day_clouds.gif",
+        "Drizzle": "./img/day/day_clouds.gif",
+        "Thunderstorm": "./img/day/day_thunderstorm.gif",
+        "Snow": "./img/day/day_snow.gif",
+        "Clear": "./img/day/day_clear.png"
     },
     "afternoon": {
-        "Rain": "/img/afternoon/afternoon_rain.gif",
-        "Clouds": "/img/afternoon/afternoon_clouds.gif",
-        "Drizzle": "/img/afternoon/afternoon_clouds.gif",
-        "Thunderstorm": "/img/afternoon/afternoon_thunderstorm.gif",
-        "Snow": "/img/afternoon/afternoon_snow.gif",
-        "Clear": "/img/afternoon/afternoon_clear.png"
+        "Rain": "./img/afternoon/afternoon_rain.gif",
+        "Clouds": "./img/afternoon/afternoon_clouds.gif",
+        "Drizzle": "./img/afternoon/afternoon_clouds.gif",
+        "Thunderstorm": "./img/afternoon/afternoon_thunderstorm.gif",
+        "Snow": "./img/afternoon/afternoon_snow.gif",
+        "Clear": "./img/afternoon/afternoon_clear.png"
     },
     "night": {
-        "Rain": "/img/night/night_rain.gif",
-        "Clouds": "/img/night/night_clouds.gif",
-        "Drizzle": "/img/night/night_clouds.gif",
-        "Thunderstorm": "/img/night/night_thunderstorm.gif",
-        "Snow": "/img/night/night_snow.gif",
-        "Clear": "/img/night/night_clear.png"
+        "Rain": "./img/night/night_rain.gif",
+        "Clouds": "./img/night/night_clouds.gif",
+        "Drizzle": "./img/night/night_clouds.gif",
+        "Thunderstorm": "./img/night/night_thunderstorm.gif",
+        "Snow": "./img/night/night_snow.gif",
+        "Clear": "./img/night/night_clear.png"
     }
 };
 
@@ -123,17 +123,17 @@ function setBackground(timeNow, mainWeather){
 if (hour >= 5 && hour < 8) {
 // 5-8 horas
 timeNow = "morning";
-document.body.style.backgroundImage = "url(/img/morning/morning_clear.png')";
+document.body.style.backgroundImage = "url(./img/morning/morning_clear.png')";
 } else if (hour >= 8 && hour < 16) {
 // 8-16 horas
 timeNow = "day";
-document.body.style.backgroundImage = "url('/img/day/day_clear.png')";
+document.body.style.backgroundImage = "url('./img/day/day_clear.png')";
 } else if (hour >= 16 && hour < 19) {
 // 16-19 horas
 timeNow = "afternoon";
-document.body.style.backgroundImage = "url('/img/afternoon/afternoon_clear.png')";
+document.body.style.backgroundImage = "url('./img/afternoon/afternoon_clear.png')";
 } else {
 // 20-4 horas
 timeNow = "night";
-document.body.style.backgroundImage = "url('/img/night/night_clear.png')";
+document.body.style.backgroundImage = "url('./img/night/night_clear.png')";
 }
