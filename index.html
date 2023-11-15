@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="html" class="default">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Higor Milani">
+    <meta name="description" content="Site que consome uma API de previsão do tempo e exibe os resultados.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" href="img/favIcon.png">
+
+    <title>Previsão do tempo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <h1>Previsão do tempo</h1>
+    <Main>
+        <form id="frmCitySearch" action="submit">
+            <div class="input-group">
+                <label for="citySearch">Informe sua Cidade</label>
+                <input class="city" type="text" id="citySearch" maxlength="35" minlength="1" required
+                    placeholder="Digite a cidade de pesquisa">
+            </div>
+
+            <div class="input-group">
+                <label for="countrySearch">Informe o código do País</label>
+                <input class="country" type="text" id="countrySearch" maxlength="2" minlength="2" required
+                    placeholder="--">
+            </div>
+            <button>Buscar</button>
+        </form>
+
+
+    </Main>
+    <aside>
+        <div class="txt">
+            <div class="txt-weather">
+                <h2>Clima</h2>
+                <h3 id="showWeatherInfo"></h3>
+                <h3 id="showLocal"></h3>
+            </div>
+
+            <div class="txt-temperature">
+                <h2>Temperatura</h2>
+                <span id="showTemperature"></span>
+                <h3>Sensação térmica:</h4>
+                    <h4 id="showTemperatureFeels"></h4>
+                    <h4 id="showTemperatureDetails"></h4>
+            </div>
+
+            <div class="txt-Details">
+                <h3 id="showHumidity"></h3>
+                <h3 id="showWind"></h3>
+            </div>
+        </div>
+
+
+        <img id="imgIcon" src="./img/icon/def.png" alt="">
+    </aside>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

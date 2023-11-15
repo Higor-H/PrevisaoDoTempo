@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Teko:wght@300;400&display=swap');
+
+:root {
+    --night-color: #3D2260;
+}
+
+html {
+    font-size: 62.5%; /*10px*/
+    height: 100vh;
+    color: #F8F8FF;
+    font-family: 'Teko', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+    margin-top: 5rem;
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    backdrop-filter: blur(20px);
+    padding: 2rem 0px 2rem 0px;
+    border: 2px solid;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    margin-right: 8px;
+
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+input {
+    margin-top: 5px;
+    width: 27rem;
+    background-color: F8F8FF;
+    color: black;
+    border-radius: 5px;
+    padding: 1rem;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.country {
+    width: 2.2rem;
+}
+
+button {
+    padding: 1.2rem;
+}
+
+.txt {
+    margin: 5rem;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    border: 2px solid;
+
+}
+
+.txt-weather,
+.txt-temperature {
+    margin: 1.5rem;
+}
+
+.txt-weather h2,
+.txt-temperature h2 {
+    font-size: 3rem;
+}
+
+.txt-weather h3 {
+    font-size: 1.5rem;
+}
+
+.txt-temperature h3,
+#showTemperatureDetails {
+    font-size: 1.5rem;
+}
+
+#showTemperatureFeels {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.txt-temperature span {
+    font-size: 4.7rem;
+    margin-bottom: 2rem;
+}
+
+#showTemperature {
+    margin-bottom: 5rem;
+}
+
+.txt-temperature h3 {
+    margin-top: 2rem;
+}
+
+.txt-weather h2 {
+    font-size: 2rem;
+}
+
+#showWeatherInfo {
+    font-size: 3rem;
+}
+
+.txt-Details {
+    font-size: 1.5rem;
+}
+
+.txt {
+    backdrop-filter: blur(20px);
+    width: 35rem;
+    padding: 3rem;
+}
+
+button:hover {
+    background-color: black;
+    color: aliceblue;
+
+}
+
+aside {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+aside img {
+    margin: 5rem;
+    height: 20rem;
+}
+
+main {
+    backdrop-filter: blur(20px);
+    padding: 2rem 2rem 2rem 2rem;
+    border: 2px solid;
+}
+
+body {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+
+body {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+@media (max-width: 961px) {
+    form {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: center;
+    }
+
+    .txt-temperature span {
+        font-size: 4.1rem;
+    }
+}
+
+@media (max-width: 893px) {
+    form {
+        flex-direction: column;
+    }
+
+    /* .txt-temperature span{
+                font-size: ;
+            } */
+
+    label,
+    button {
+        margin-top: 2rem;
+    }
+
+    .input-group {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    aside {
+        flex-direction: column;
+    }
+
+    body {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.9rem;
+    }
+
+    input {
+        width: 40vw;
+    }
+
+    .txt {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 253px;
+    }
+
+
+}
+
+@media (max-width: 426px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    input {
+        width: 52vw;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 376px) {
+    body {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .txt {
+        padding: 1.9rem;
+    }
+
+    input {
+        width: 62vw;
+    }
+
+    .txt-Details {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 300px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    label {
+        font-size: 1.4rem;
+    }
+}
