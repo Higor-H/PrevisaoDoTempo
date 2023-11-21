@@ -13,12 +13,37 @@ const showTemperatureDetails = document.querySelector("#showTemperatureDetails")
 const showHumidity = document.querySelector("#showHumidity");
 const showWind = document.querySelector("#showWind");
 
-// Variaveis da API
-const key = "9caf5deb117e62e1d040ac0889adf958";
+
+// calculando zona de tempo
+function timeZone(lat) {
+    return lat.toString(16);
+}
+let relationLatLog = [];
+
+function areaZone(coordinate){
+    relationLatLog.push(timeZone(coordinate)); 
+}
+function areaZonee (coordinate, coordinate2){
+    relationLatLog.push("&");
+   let dec =  timeZone(coordinate);
+   relationLatLog.push(dec);
+   relationLatLog.push("ppi");
+   let decc =  timeZone(coordinate2);
+   relationLatLog.push(decc);
+   relationLatLog.push("=");
+}
+
+areaZonee(10,13); //America
+areaZone(2756432142342118); // asia
+areaZone(12979752126154906); // europa
+areaZone(915800); // japão
+
+const units = "metric"
+const timezone = relationLatLog.join('');
 const lang = "pt_br";
 
-function getWeather(city, country){
-    return fetch (`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&lang=${lang}&appid=${key}`)
+function getWeather(city, country){48
+    return fetch (`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=${units}&timezone=${timezone}&lang=${lang}&key=demokey`)
     .then((weatherData) => weatherData.json())
     .catch((msgError) => console.log(msgError));
 }
